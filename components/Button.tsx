@@ -2,20 +2,17 @@
 
 import React from "react";
 import Image from "next/image";
+import { ButtonProps } from "@/types";
 
-const Button = ({}) => {
-  const handleClick = () => {
-    // your event handler logic here
-  };
-
+const Button = ({ title, containerStyles, handleClick }: ButtonProps) => {
   return (
     <button
       disabled={false}
       type={"button"}
-      className={`custom-btn`}
+      className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
     >
-      <span className={`flex-1`}>title</span>
+      <span className={`flex-1`}>{title}</span>
     </button>
   );
 };

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Button from "./Button";
+import Image from "next/image";
 
 const HeroSection = () => {
   const handleScroll = () => {
@@ -20,9 +21,21 @@ const HeroSection = () => {
         </p>
 
         <Button
-          title="Explore Motorbikes"
+          title="Discover Motorbikes"
           containerStyles="bg-primary-blue text-white rounded-full mt-10 handleClick={handleScroll}"
+          handleClick={function (
+            event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+          ): void {
+            throw new Error("Function not implemented.");
+          }}
         />
+      </div>
+
+      <div className="hero__image-container">
+        <div className="hero__image">
+          <Image src="/bike03.png" alt="hero" fill className="object-contain" />
+          <div className="hero__image-overlay" />
+        </div>
       </div>
     </div>
   );
