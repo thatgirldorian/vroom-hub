@@ -4,11 +4,16 @@ import React from "react";
 import Image from "next/image";
 import { ButtonProps } from "@/types";
 
-const Button = ({ title, containerStyles, handleClick }: ButtonProps) => {
+const Button = ({
+  title,
+  containerStyles,
+  btnType,
+  handleClick,
+}: ButtonProps) => {
   return (
     <button
       disabled={false}
-      type={"button"}
+      type={btnType || "button"}
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
     >

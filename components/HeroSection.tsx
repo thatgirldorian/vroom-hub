@@ -33,7 +33,12 @@ const HeroSection = () => {
 
       <div className="hero__image-container">
         <div className="hero__image">
-          <Image src="/bike03.png" alt="hero" fill className="object-contain" />
+          <Image
+            src="/bike03.png"
+            alt="hero-image-of-a-motorbike"
+            fill
+            className="object-contain"
+          />
           <div className="hero__image-overlay" />
         </div>
       </div>
